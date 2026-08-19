@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Book a test drive — Maple Dealership</title>
+<meta name="description" content="Reserve an hour with any vehicle on the Maple Dealership lot in Kitchener. Solo drives welcome, keys ready when you arrive.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Public+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="topbar mono">
+  <div class="wrap topbar__in">
+    <div class="topbar__set"><span>418 Maple Line, Kitchener ON</span><a href="tel:+15195550142">519 555 0142</a></div>
+    <div class="topbar__set"><span>Sales open today until 7:00</span><a href="contact.html">Hours &amp; directions</a></div>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap masthead__in">
+    <a class="logo" href="index.html">
+      <svg viewBox="0 0 100 100" aria-hidden="true"><path fill="#E8A33D" d="M50 90 L47.5 62 L26 66 L29 57 L7 41 L13 38 L9 21 L28 25 L32 17 L46 31 L39 7 L50 12 L61 7 L54 31 L68 17 L72 25 L91 21 L87 38 L93 41 L71 57 L74 66 L52.5 62 L50 90 Z"/></svg>
+      <span><span class="logo__name">Maple Dealership</span><span class="logo__sub">Kitchener, ON</span></span>
+    </a>
+    <button class="navtoggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+    <nav class="nav" id="primary-nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="inventory.html">Inventory</a>
+      <a href="specials.html">Specials</a>
+      <a href="financing.html">Financing</a>
+      <a href="trade-in.html">Trade-in</a>
+      <a href="service.html">Service</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a class="btn btn--maple nav__cta" href="test-drive.html" aria-current="page">Book a test drive</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="pagehead">
+    <div class="wrap">
+      <p class="crumb"><a href="index.html">Home</a> / Test drive</p>
+      <h1>Take it out alone.</h1>
+      <p class="lede">Pick a car and an hour. We pull it out, warm it up, and hand you the keys with a licence check and nothing else. Nobody rides along unless you ask.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap split split--start">
+      <form class="form" data-confirm>
+        <fieldset>
+          <legend>The car</legend>
+          <div class="form__grid">
+            <label class="span2"><span>Which vehicle</span>
+              <select name="vehicle" id="td-vehicle"><option value="">Choose from the lot</option></select></label>
+            <label class="span2"><span>Second choice, in case the first is out</span>
+              <select name="alt" id="td-alt"><option value="">No second choice</option></select></label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>When</legend>
+          <div class="form__grid">
+            <label><span>Date</span><input type="date" name="date" id="td-date" required></label>
+            <label><span>Arrival time</span><select name="time">
+              <option>09:00</option><option>10:00</option><option>11:00</option><option>12:00</option>
+              <option>13:00</option><option>14:00</option><option>15:00</option><option>16:00</option>
+              <option>17:00</option><option>18:00</option></select></label>
+            <label class="span2"><span>How long do you want it</span><select name="length">
+              <option>30 minutes, around town</option>
+              <option selected>1 hour, town and highway</option>
+              <option>2 hours, take it to your mechanic</option>
+              <option>Overnight, ask us — it is sometimes possible</option>
+            </select></label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>You</legend>
+          <div class="form__grid">
+            <label><span>Name</span><input name="name" required autocomplete="name"></label>
+            <label><span>Phone</span><input type="tel" name="phone" required autocomplete="tel"></label>
+            <label class="span2"><span>Email</span><input type="email" name="email" required autocomplete="email"></label>
+            <label class="span2"><span>Anything to set up first</span><textarea name="notes" placeholder="Fit a child seat, bring a trade for appraisal, test the roof box, check it tows"></textarea></label>
+          </div>
+          <div style="margin-top:16px">
+            <label class="checkline"><input type="checkbox" name="trade"><span>I am bringing a trade-in to appraise while I drive</span></label>
+            <label class="checkline"><input type="checkbox" name="accompany"><span>I would like a product specialist to ride along</span></label>
+          </div>
+        </fieldset>
+
+        <button class="btn btn--maple btn--wide" type="submit">Reserve this drive</button>
+        <p class="formnote">Booked. We will text a confirmation and pull the car out fifteen minutes before you arrive.</p>
+      </form>
+
+      <div class="stack">
+        <div class="plate">
+          <div class="plate__band"><span>Bring with you</span><b>Two things</b></div>
+          <div class="plate__body">
+            <div class="specrows" style="border-top:0;margin-top:0">
+              <div><span>Driver&rsquo;s licence</span><span>Valid, full class</span></div>
+              <div><span>Insurance</span><span>Ours covers the drive</span></div>
+              <div><span>Deposit</span><span>None</span></div>
+              <div><span>Sales pressure</span><span>None</span></div>
+            </div>
+            <p class="hint" style="margin-top:16px">G2 drivers can drive with a licensed passenger. Under 21, we will need a parent or guardian on the licence check.</p>
+          </div>
+        </div>
+
+        <h2 style="font-size:1.6rem">Route suggestions from the lot</h2>
+        <dl class="deflist">
+          <div><dt>15 min</dt><dd><b>Fairway loop</b><p>Stop-and-go, speed bumps, and a tight parking garage. Tells you about visibility and low-speed ride.</p></dd></div>
+          <div><dt>30 min</dt><dd><b>Highway 8 to Freeport and back</b><p>On-ramp acceleration, 100 km/h wind noise, lane-keeping behaviour.</p></dd></div>
+          <div><dt>60 min</dt><dd><b>Out to St. Jacobs</b><p>Rough county pavement and a long hill. The best test of suspension and, in an EV, of real range.</p></dd></div>
+        </dl>
+        <div class="note">Winter shopping? Ask for the snow route. We will send you along the unplowed service road so you can feel the AWD system actually work.</div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <a class="logo" href="index.html" style="margin-bottom:16px">
+          <svg viewBox="0 0 100 100" aria-hidden="true"><path fill="#E8A33D" d="M50 90 L47.5 62 L26 66 L29 57 L7 41 L13 38 L9 21 L28 25 L32 17 L46 31 L39 7 L50 12 L61 7 L54 31 L68 17 L72 25 L91 21 L87 38 L93 41 L71 57 L74 66 L52.5 62 L50 90 Z"/></svg>
+          <span><span class="logo__name">Maple Dealership</span><span class="logo__sub">Est. 1998</span></span>
+        </a>
+        <p>418 Maple Line, Kitchener, Ontario&nbsp;N2C&nbsp;1X4<br>
+        Sales <a href="tel:+15195550142">519 555 0142</a> &middot; Service <a href="tel:+15195550188">519 555 0188</a><br>
+        <a href="mailto:hello@mapledealership.ca">hello@mapledealership.ca</a></p>
+      </div>
+      <div><h4>Shopping</h4><ul>
+        <li><a href="inventory.html">All inventory</a></li><li><a href="specials.html">Specials</a></li>
+        <li><a href="test-drive.html">Book a test drive</a></li><li><a href="trade-in.html">Value your trade</a></li>
+        <li><a href="financing.html">Financing</a></li></ul></div>
+      <div><h4>Ownership</h4><ul>
+        <li><a href="service.html">Service &amp; parts</a></li><li><a href="service.html#warranty">Warranty</a></li>
+        <li><a href="about.html">About us</a></li><li><a href="contact.html">Contact</a></li>
+        <li><a href="faq.html">Questions</a></li></ul></div>
+      <div><h4>Hours</h4>
+        <table class="hours"><tbody>
+          <tr><td>Sales, Mon&ndash;Thu</td><td>9:00 &ndash; 19:00</td></tr>
+          <tr><td>Sales, Fri&ndash;Sat</td><td>9:00 &ndash; 17:00</td></tr>
+          <tr><td>Service, Mon&ndash;Fri</td><td>7:30 &ndash; 17:30</td></tr>
+          <tr><td>Sunday</td><td>Closed</td></tr>
+        </tbody></table>
+      </div>
+    </div>
+    <div class="footer__base">
+      <span>&copy; <span data-year>2026</span> Maple Dealership Ltd. OMVIC registered. UCDA member.</span>
+      <span>Prices exclude HST and licensing. Fictional dealership, built as a demonstration.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/site.js"></script>
+<script>
+(function () {
+  var opts = window.MAPLE_STOCK.map(function (v) {
+    return '<option value="' + v.id + '">' + v.year + ' ' + v.make + ' ' + v.model + ' — ' + v.id + '</option>';
+  }).join('');
+  var first = document.getElementById('td-vehicle'), alt = document.getElementById('td-alt');
+  first.innerHTML += opts;
+  alt.innerHTML += opts;
+
+  /* preselect from a vehicle page link, e.g. test-drive.html?stock=MD-4501 */
+  var id = new URLSearchParams(location.search).get('stock');
+  if (id) first.value = id;
+
+  /* no drives in the past, and the lot is closed on Sundays */
+  var d = document.getElementById('td-date');
+  var today = new Date();
+  d.min = today.toISOString().slice(0, 10);
+})();
+</script>
+</body>
+</html>

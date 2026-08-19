@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Financing — Maple Dealership</title>
+<meta name="description" content="Estimate your payment and apply for financing at Maple Dealership. Six lenders, same-day answers, and rates from 5.49% APR on approved credit.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Public+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="topbar mono">
+  <div class="wrap topbar__in">
+    <div class="topbar__set"><span>418 Maple Line, Kitchener ON</span><a href="tel:+15195550142">519 555 0142</a></div>
+    <div class="topbar__set"><span>Sales open today until 7:00</span><a href="contact.html">Hours &amp; directions</a></div>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap masthead__in">
+    <a class="logo" href="index.html">
+      <svg viewBox="0 0 100 100" aria-hidden="true"><path fill="#E8A33D" d="M50 90 L47.5 62 L26 66 L29 57 L7 41 L13 38 L9 21 L28 25 L32 17 L46 31 L39 7 L50 12 L61 7 L54 31 L68 17 L72 25 L91 21 L87 38 L93 41 L71 57 L74 66 L52.5 62 L50 90 Z"/></svg>
+      <span><span class="logo__name">Maple Dealership</span><span class="logo__sub">Kitchener, ON</span></span>
+    </a>
+    <button class="navtoggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+    <nav class="nav" id="primary-nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="inventory.html">Inventory</a>
+      <a href="specials.html">Specials</a>
+      <a href="financing.html" aria-current="page">Financing</a>
+      <a href="trade-in.html">Trade-in</a>
+      <a href="service.html">Service</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a class="btn btn--maple nav__cta" href="test-drive.html">Book a test drive</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="pagehead">
+    <div class="wrap">
+      <p class="crumb"><a href="index.html">Home</a> / Financing</p>
+      <h1>The payment, before<br>the paperwork.</h1>
+      <p class="lede">Move the sliders and the number moves with them. When you are ready, one application goes to six lenders and you pick the offer &mdash; rate, term and total interest laid out side by side.</p>
+    </div>
+  </section>
+
+  <!-- CALCULATOR -->
+  <section class="section">
+    <div class="wrap split split--start">
+      <div>
+        <p class="eyebrow">Payment estimator</p>
+        <h2>Try the numbers.</h2>
+        <p class="lede" style="margin-top:16px">Ontario HST of 13% is added to the vehicle price and financed with it. A trade-in reduces the taxable amount, which is why trading in usually beats selling privately for a small margin.</p>
+
+        <form class="form" style="margin-top:28px" id="calc-form" onsubmit="return false">
+          <label class="field"><span>Vehicle price &mdash; <b id="o-price">$38,995</b></span>
+            <input type="range" id="i-price" min="8000" max="90000" step="5" value="38995"></label>
+          <label class="field"><span>Down payment &mdash; <b id="o-down">$4,000</b></span>
+            <input type="range" id="i-down" min="0" max="30000" step="250" value="4000"></label>
+          <label class="field"><span>Trade-in credit &mdash; <b id="o-trade">$6,500</b></span>
+            <input type="range" id="i-trade" min="0" max="40000" step="250" value="6500"></label>
+          <label class="field"><span>Annual rate &mdash; <b id="o-rate">6.49%</b></span>
+            <input type="range" id="i-rate" min="2" max="19.9" step="0.1" value="6.49"></label>
+          <label class="field"><span>Term</span>
+            <select id="i-term">
+              <option value="36">36 months</option><option value="48">48 months</option>
+              <option value="60">60 months</option><option value="72" selected>72 months</option>
+              <option value="84">84 months</option>
+            </select></label>
+          <label class="field"><span>Payment frequency</span>
+            <select id="i-freq"><option value="26" selected>Bi-weekly</option><option value="12">Monthly</option><option value="52">Weekly</option></select></label>
+        </form>
+      </div>
+
+      <div class="calc" style="position:sticky;top:96px">
+        <div class="calc__out">
+          <span id="o-freq-label">Estimated bi-weekly payment</span>
+          <b id="o-payment">$246</b>
+          <p class="mono" style="margin:12px 0 0;color:#93A9A1" id="o-summary">72 months &middot; 6.49% APR</p>
+        </div>
+        <div class="calc__in">
+          <div class="calc__row"><span>Vehicle price</span><span id="o-r-price">$38,995</span></div>
+          <div class="calc__row"><span>HST (13%)</span><span id="o-r-tax">$5,069</span></div>
+          <div class="calc__row"><span>Down payment</span><span id="o-r-down">&minus;$4,000</span></div>
+          <div class="calc__row"><span>Trade-in credit</span><span id="o-r-trade">&minus;$6,500</span></div>
+          <div class="calc__row"><span>Amount financed</span><span id="o-r-fin">$33,564</span></div>
+          <div class="calc__row"><span>Total interest</span><span id="o-r-int">$7,010</span></div>
+          <div class="calc__row" style="border:0"><span>Cost of borrowing</span><span id="o-r-total">$40,574</span></div>
+          <p class="hint" style="margin:14px 0 16px">An estimate, not an offer. Your actual rate depends on credit history, the lender and the model year.</p>
+          <a class="btn btn--maple btn--wide" href="#apply">Apply with these numbers</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LENDERS -->
+  <section class="section section--dark">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><p class="eyebrow eyebrow--light">How we shop it</p><h2>One application,<br>six lenders.</h2></div>
+        <p class="lede" style="margin:0">A single credit pull goes to all six. Multiple auto enquiries inside fourteen days count as one on Canadian credit files, so shopping does not cost you points.</p>
+      </div>
+      <dl class="deflist">
+        <div><dt>Bank</dt><dd><b>Prime terms, 5.49%&ndash;7.99%</b><p>Best fit for established credit and vehicles four model years old or newer.</p></dd></div>
+        <div><dt>Credit union</dt><dd><b>Flexible on older vehicles</b><p>Local underwriting, and the only lender here that will finance a 2016 with high mileage.</p></dd></div>
+        <div><dt>Captive</dt><dd><b>Manufacturer programs</b><p>Subvented rates on new stock, including 0% offers when the manufacturer runs them.</p></dd></div>
+        <div><dt>Second chance</dt><dd><b>Rebuilding credit, 12.9%&ndash;19.9%</b><p>Real approvals after a consumer proposal or bankruptcy discharge. Refinance after twelve clean payments.</p></dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- APPLICATION -->
+  <section class="section" id="apply">
+    <div class="wrap split split--start">
+      <div>
+        <p class="eyebrow">Credit application</p>
+        <h2>Apply in about<br>four minutes.</h2>
+        <p class="lede" style="margin-top:16px">We need enough to run the application properly and nothing more. Applying before 3:00 pm on a weekday gets you an answer the same day.</p>
+        <div class="note" style="margin-top:24px">Bring to delivery: a valid Ontario licence, proof of insurance, and a void cheque or pre-authorised debit form.</div>
+        <table class="hours" style="margin-top:28px">
+          <caption>What each answer usually means</caption>
+          <tbody>
+            <tr><td>Approved</td><td>Rate and term confirmed</td></tr>
+            <tr><td>Approved with conditions</td><td>Proof of income or larger down payment</td></tr>
+            <tr><td>Declined</td><td>We call you and explain what would change it</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <form class="form" data-confirm>
+        <fieldset>
+          <legend>About you</legend>
+          <div class="form__grid">
+            <label><span>First name</span><input name="first" required autocomplete="given-name"></label>
+            <label><span>Last name</span><input name="last" required autocomplete="family-name"></label>
+            <label><span>Email</span><input type="email" name="email" required autocomplete="email"></label>
+            <label><span>Phone</span><input type="tel" name="phone" required autocomplete="tel"></label>
+            <label class="span2"><span>Home address</span><input name="address" required autocomplete="street-address"></label>
+            <label><span>City</span><input name="city" required autocomplete="address-level2"></label>
+            <label><span>Postal code</span><input name="postal" required autocomplete="postal-code"></label>
+            <label><span>Date of birth</span><input type="date" name="dob" required></label>
+            <label><span>Housing</span><select name="housing"><option>Own</option><option>Rent</option><option>Live with family</option></select></label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Income</legend>
+          <div class="form__grid">
+            <label><span>Employer</span><input name="employer" required></label>
+            <label><span>Job title</span><input name="title" required></label>
+            <label><span>Gross annual income</span><input type="number" name="income" min="0" step="1000" required></label>
+            <label><span>Years there</span><input type="number" name="tenure" min="0" step="0.5" required></label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>The vehicle</legend>
+          <div class="form__grid">
+            <label class="span2"><span>Vehicle or stock number</span><input name="vehicle" placeholder="MD-4471, or tell us what you are looking for"></label>
+            <label><span>Down payment</span><input type="number" name="down" min="0" step="100" value="4000"></label>
+            <label><span>Preferred term</span><select name="term"><option>48 months</option><option>60 months</option><option selected>72 months</option><option>84 months</option></select></label>
+            <label class="span2"><span>Anything we should know</span><textarea name="notes" placeholder="Credit history, a trade-in, a date you need the car by"></textarea></label>
+          </div>
+        </fieldset>
+
+        <label class="checkline"><input type="checkbox" name="consent" required><span>I authorise Maple Dealership to obtain a credit report and share this application with its lenders.</span></label>
+        <p style="margin-top:20px"><button class="btn btn--maple btn--wide" type="submit">Send my application</button></p>
+        <p class="formnote">Application received. A finance manager will call you at the number above within one business hour.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <a class="logo" href="index.html" style="margin-bottom:16px">
+          <svg viewBox="0 0 100 100" aria-hidden="true"><path fill="#E8A33D" d="M50 90 L47.5 62 L26 66 L29 57 L7 41 L13 38 L9 21 L28 25 L32 17 L46 31 L39 7 L50 12 L61 7 L54 31 L68 17 L72 25 L91 21 L87 38 L93 41 L71 57 L74 66 L52.5 62 L50 90 Z"/></svg>
+          <span><span class="logo__name">Maple Dealership</span><span class="logo__sub">Est. 1998</span></span>
+        </a>
+        <p>418 Maple Line, Kitchener, Ontario&nbsp;N2C&nbsp;1X4<br>
+        Sales <a href="tel:+15195550142">519 555 0142</a> &middot; Service <a href="tel:+15195550188">519 555 0188</a><br>
+        <a href="mailto:hello@mapledealership.ca">hello@mapledealership.ca</a></p>
+      </div>
+      <div><h4>Shopping</h4><ul>
+        <li><a href="inventory.html">All inventory</a></li><li><a href="specials.html">Specials</a></li>
+        <li><a href="test-drive.html">Book a test drive</a></li><li><a href="trade-in.html">Value your trade</a></li>
+        <li><a href="financing.html">Financing</a></li></ul></div>
+      <div><h4>Ownership</h4><ul>
+        <li><a href="service.html">Service &amp; parts</a></li><li><a href="service.html#warranty">Warranty</a></li>
+        <li><a href="about.html">About us</a></li><li><a href="contact.html">Contact</a></li>
+        <li><a href="faq.html">Questions</a></li></ul></div>
+      <div><h4>Hours</h4>
+        <table class="hours"><tbody>
+          <tr><td>Sales, Mon&ndash;Thu</td><td>9:00 &ndash; 19:00</td></tr>
+          <tr><td>Sales, Fri&ndash;Sat</td><td>9:00 &ndash; 17:00</td></tr>
+          <tr><td>Service, Mon&ndash;Fri</td><td>7:30 &ndash; 17:30</td></tr>
+          <tr><td>Sunday</td><td>Closed</td></tr>
+        </tbody></table>
+      </div>
+    </div>
+    <div class="footer__base">
+      <span>&copy; <span data-year>2026</span> Maple Dealership Ltd. OMVIC registered. UCDA member.</span>
+      <span>Prices exclude HST and licensing. Fictional dealership, built as a demonstration.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/site.js"></script>
+<script>
+(function () {
+  var money = window.MAPLE_FMT.money;
+  var el = function (i) { return document.getElementById(i); };
+  var LABEL = { 26: 'bi-weekly', 12: 'monthly', 52: 'weekly' };
+
+  function calc() {
+    var price = +el('i-price').value, down = +el('i-down').value, trade = +el('i-trade').value;
+    var rate = +el('i-rate').value, term = +el('i-term').value, freq = +el('i-freq').value;
+
+    var tax = Math.round((price - trade) * 0.13);          /* trade reduces taxable amount */
+    var financed = Math.max(0, price + tax - down - trade);
+    var r = rate / 100 / freq, n = term / 12 * freq;
+    var pay = r > 0 ? financed * r / (1 - Math.pow(1 + r, -n)) : financed / n;
+    pay = Math.round(pay);
+    var interest = Math.max(0, Math.round(pay * n - financed));
+
+    el('o-price').textContent = money(price);
+    el('o-down').textContent = money(down);
+    el('o-trade').textContent = money(trade);
+    el('o-rate').textContent = rate.toFixed(2) + '%';
+    el('o-payment').textContent = money(pay);
+    el('o-freq-label').textContent = 'Estimated ' + LABEL[freq] + ' payment';
+    el('o-summary').textContent = term + ' months · ' + rate.toFixed(2) + '% APR';
+    el('o-r-price').textContent = money(price);
+    el('o-r-tax').textContent = money(tax);
+    el('o-r-down').textContent = '−' + money(down);
+    el('o-r-trade').textContent = '−' + money(trade);
+    el('o-r-fin').textContent = money(financed);
+    el('o-r-int').textContent = money(interest);
+    el('o-r-total').textContent = money(financed + interest);
+  }
+
+  el('calc-form').addEventListener('input', calc);
+  el('calc-form').addEventListener('change', calc);
+  calc();
+})();
+</script>
+</body>
+</html>

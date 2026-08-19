@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vehicle detail — Maple Dealership</title>
+<meta name="description" content="Full spec plate for a vehicle at Maple Dealership: price, odometer, drivetrain, features, inspection record and estimated payment.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Public+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="topbar mono">
+  <div class="wrap topbar__in">
+    <div class="topbar__set"><span>418 Maple Line, Kitchener ON</span><a href="tel:+15195550142">519 555 0142</a></div>
+    <div class="topbar__set"><span>Sales open today until 7:00</span><a href="contact.html">Hours &amp; directions</a></div>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap masthead__in">
+    <a class="logo" href="index.html">
+      <svg viewBox="0 0 100 100" aria-hidden="true"><path fill="#E8A33D" d="M50 90 L47.5 62 L26 66 L29 57 L7 41 L13 38 L9 21 L28 25 L32 17 L46 31 L39 7 L50 12 L61 7 L54 31 L68 17 L72 25 L91 21 L87 38 L93 41 L71 57 L74 66 L52.5 62 L50 90 Z"/></svg>
+      <span><span class="logo__name">Maple Dealership</span><span class="logo__sub">Kitchener, ON</span></span>
+    </a>
+    <button class="navtoggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+    <nav class="nav" id="primary-nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="inventory.html" aria-current="page">Inventory</a>
+      <a href="specials.html">Specials</a>
+      <a href="financing.html">Financing</a>
+      <a href="trade-in.html">Trade-in</a>
+      <a href="service.html">Service</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a class="btn btn--maple nav__cta" href="test-drive.html">Book a test drive</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="pagehead">
+    <div class="wrap">
+      <p class="crumb"><a href="index.html">Home</a> / <a href="inventory.html">Inventory</a> / <span id="crumb-name">Vehicle</span></p>
+      <h1 id="v-title">Loading vehicle</h1>
+      <p class="lede" id="v-sub"></p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap split split--start">
+      <div>
+        <div class="carart" id="v-art" style="border:1px solid var(--ink)"></div>
+        <div class="gallery" id="v-gallery"></div>
+
+        <h2 style="margin-top:44px;font-size:1.7rem">What is on it</h2>
+        <div class="rule" style="margin-top:18px"></div>
+        <ul id="v-feat" class="grid grid--2" style="list-style:none;padding:0;margin:0;font-family:var(--mono);font-size:.76rem;letter-spacing:.08em"></ul>
+
+        <h2 style="margin-top:44px;font-size:1.7rem">The inspection record</h2>
+        <div class="rule" style="margin-top:18px"></div>
+        <dl class="deflist">
+          <div><dt>Brakes</dt><dd><b>Front 8 mm, rear 7 mm</b><p>Measured at intake. Replacement is due below 3 mm.</p></dd></div>
+          <div><dt>Tires</dt><dd><b>All-season, 7/32 remaining</b><p>Matched set, same date code, no plugs or patches.</p></dd></div>
+          <div><dt>Structure</dt><dd><b>No frame or structural repair</b><p>Verified against the history report and a lift inspection.</p></dd></div>
+          <div><dt>History</dt><dd><b>Clean, no reported claims</b><p>Full CARFAX Canada report is emailed with the quote, before any deposit.</p></dd></div>
+        </dl>
+      </div>
+
+      <!-- The spec plate, at full size -->
+      <div class="stack">
+        <div class="plate">
+          <div class="plate__band"><span id="v-stock">Stock</span><b id="v-badge">In stock</b></div>
+          <div class="plate__body">
+            <div class="specrows" style="border-top:0;margin-top:0" id="v-specs"></div>
+            <div style="display:flex;justify-content:space-between;align-items:flex-end;padding-top:16px">
+              <div><span class="plate__price" id="v-price">$0</span><small>Plus HST &amp; licensing</small></div>
+              <div style="text-align:right"><span class="plate__price" id="v-pay" style="font-size:1.4rem">$0</span><small>Bi-weekly, 72 mo</small></div>
+            </div>
+            <p style="margin:18px 0 0"><a class="btn btn--maple btn--wide" id="v-drive" href="test-drive.html">Book this test drive</a></p>
+            <p style="margin:10px 0 0"><a class="btn btn--ghost btn--wide" href="financing.html">Get a payment quote</a></p>
+            <p style="margin:10px 0 0"><a class="btn btn--ghost btn--wide" href="trade-in.html">Apply a trade-in</a></p>
+          </div>
+        </div>
+
+        <div class="plate">
+          <div class="plate__band"><span>Included in the price</span><b>No fees</b></div>
+          <div class="plate__body">
+            <div class="specrows" style="border-top:0;margin-top:0">
+              <div><span>Safety certificate</span><span>Included</span></div>
+              <div><span>Full detail</span><span>Included</span></div>
+              <div><span>Second key</span><span>Included</span></div>
+              <div><span>History report</span><span>Included</span></div>
+              <div><span>Admin fee</span><span>$0</span></div>
+              <div><span>Return window</span><span>7 days / 500 km</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="note">Questions about this one? Call the sales desk at <a href="tel:+15195550142">519 555 0142</a> and quote the stock number.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--dark">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><p class="eyebrow eyebrow--light">Similar on the lot</p><h2>Three more worth driving.</h2></div>
+        <a class="btn btn--ghost-light" href="inventory.html">All inventory</a>
+      </div>
+      <div class="grid grid--3" id="v-similar"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <a class="logo" href="index.html" style="margin-bottom:16px">
+          <svg viewBox="0 0 100 100" aria-hidden="true"><path fill="#E8A33D" d="M50 90 L47.5 62 L26 66 L29 57 L7 41 L13 38 L9 21 L28 25 L32 17 L46 31 L39 7 L50 12 L61 7 L54 31 L68 17 L72 25 L91 21 L87 38 L93 41 L71 57 L74 66 L52.5 62 L50 90 Z"/></svg>
+          <span><span class="logo__name">Maple Dealership</span><span class="logo__sub">Est. 1998</span></span>
+        </a>
+        <p>418 Maple Line, Kitchener, Ontario&nbsp;N2C&nbsp;1X4<br>
+        Sales <a href="tel:+15195550142">519 555 0142</a> &middot; Service <a href="tel:+15195550188">519 555 0188</a><br>
+        <a href="mailto:hello@mapledealership.ca">hello@mapledealership.ca</a></p>
+      </div>
+      <div><h4>Shopping</h4><ul>
+        <li><a href="inventory.html">All inventory</a></li><li><a href="specials.html">Specials</a></li>
+        <li><a href="test-drive.html">Book a test drive</a></li><li><a href="trade-in.html">Value your trade</a></li>
+        <li><a href="financing.html">Financing</a></li></ul></div>
+      <div><h4>Ownership</h4><ul>
+        <li><a href="service.html">Service &amp; parts</a></li><li><a href="service.html#warranty">Warranty</a></li>
+        <li><a href="about.html">About us</a></li><li><a href="contact.html">Contact</a></li>
+        <li><a href="faq.html">Questions</a></li></ul></div>
+      <div><h4>Hours</h4>
+        <table class="hours"><tbody>
+          <tr><td>Sales, Mon&ndash;Thu</td><td>9:00 &ndash; 19:00</td></tr>
+          <tr><td>Sales, Fri&ndash;Sat</td><td>9:00 &ndash; 17:00</td></tr>
+          <tr><td>Service, Mon&ndash;Fri</td><td>7:30 &ndash; 17:30</td></tr>
+          <tr><td>Sunday</td><td>Closed</td></tr>
+        </tbody></table>
+      </div>
+    </div>
+    <div class="footer__base">
+      <span>&copy; <span data-year>2026</span> Maple Dealership Ltd. OMVIC registered. UCDA member.</span>
+      <span>Prices exclude HST and licensing. Fictional dealership, built as a demonstration.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/site.js"></script>
+<script>
+(function () {
+  var stock = window.MAPLE_STOCK, art = window.MAPLE_ART, fmt = window.MAPLE_FMT;
+  var id = new URLSearchParams(location.search).get('stock');
+  var v = stock.filter(function (s) { return s.id === id; })[0] || stock[0];
+  var el = function (i) { return document.getElementById(i); };
+
+  var name = v.year + ' ' + v.make + ' ' + v.model;
+  document.title = name + ' — Maple Dealership';
+  el('crumb-name').textContent = name;
+  el('v-title').textContent = name;
+  el('v-sub').textContent = v.colour + ' · ' + v.body + ' · ' + fmt.km(v.km) + ' · ' + v.drive + ' · ' + v.fuel;
+  el('v-stock').textContent = 'Stock ' + v.id;
+  el('v-badge').textContent = v.badge || v.condition;
+  el('v-price').textContent = fmt.money(v.price);
+  el('v-art').innerHTML = art.car(v.body) + art.leaf();
+  el('v-drive').href = 'test-drive.html?stock=' + v.id;
+  el('v-gallery').innerHTML = ['dark', 'light', 'dark', 'light'].map(function (t) {
+    return '<div class="carart">' + art.car(v.body, t) + '</div>';
+  }).join('');
+
+  /* payment: 72 months at 6.49%, 13% HST, no down payment */
+  var principal = v.price * 1.13;
+  var r = 0.0649 / 26, n = 72 / 12 * 26;
+  var pay = Math.round(principal * r / (1 - Math.pow(1 + r, -n)));
+  el('v-pay').textContent = fmt.money(pay);
+
+  var rows = [
+    ['Model year', v.year], ['Body', v.body], ['Odometer', fmt.km(v.km)],
+    ['Fuel', v.fuel], ['Drivetrain', v.drive], ['Transmission', v.trans],
+    ['Exterior', v.colour], ['Condition', v.condition], ['Safety certificate', 'Included']
+  ];
+  el('v-specs').innerHTML = rows.map(function (p) {
+    return '<div><span>' + p[0] + '</span><span>' + p[1] + '</span></div>';
+  }).join('');
+
+  el('v-feat').innerHTML = v.feat.map(function (f) {
+    return '<li style="padding:11px 0;border-bottom:1px dashed var(--line)">' + f + '</li>';
+  }).join('');
+
+  el('v-similar').innerHTML = stock.filter(function (s) { return s.id !== v.id; })
+    .sort(function (a, b) { return Math.abs(a.price - v.price) - Math.abs(b.price - v.price); })
+    .slice(0, 3).map(window.MAPLE_CARD).join('');
+})();
+</script>
+</body>
+</html>

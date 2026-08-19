@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Value your trade — Maple Dealership</title>
+<meta name="description" content="Get a real, written trade-in offer from Maple Dealership in Kitchener. Good for seven days, whether or not you buy from us.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Public+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="topbar mono">
+  <div class="wrap topbar__in">
+    <div class="topbar__set"><span>418 Maple Line, Kitchener ON</span><a href="tel:+15195550142">519 555 0142</a></div>
+    <div class="topbar__set"><span>Sales open today until 7:00</span><a href="contact.html">Hours &amp; directions</a></div>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap masthead__in">
+    <a class="logo" href="index.html">
+      <svg viewBox="0 0 100 100" aria-hidden="true"><path fill="#E8A33D" d="M50 90 L47.5 62 L26 66 L29 57 L7 41 L13 38 L9 21 L28 25 L32 17 L46 31 L39 7 L50 12 L61 7 L54 31 L68 17 L72 25 L91 21 L87 38 L93 41 L71 57 L74 66 L52.5 62 L50 90 Z"/></svg>
+      <span><span class="logo__name">Maple Dealership</span><span class="logo__sub">Kitchener, ON</span></span>
+    </a>
+    <button class="navtoggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+    <nav class="nav" id="primary-nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="inventory.html">Inventory</a>
+      <a href="specials.html">Specials</a>
+      <a href="financing.html">Financing</a>
+      <a href="trade-in.html" aria-current="page">Trade-in</a>
+      <a href="service.html">Service</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a class="btn btn--maple nav__cta" href="test-drive.html">Book a test drive</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="pagehead">
+    <div class="wrap">
+      <p class="crumb"><a href="index.html">Home</a> / Trade-in</p>
+      <h1>Tell us what you drive.<br>We will tell you what it is worth.</h1>
+      <p class="lede">A written offer inside one business day, valid for seven days or 500 km. You can take the cheque and walk &mdash; buying something from us is not a condition.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap split split--start">
+      <form class="form" data-confirm>
+        <fieldset>
+          <legend>Your vehicle</legend>
+          <div class="form__grid">
+            <label><span>Model year</span><input type="number" name="year" min="1985" max="2027" required placeholder="2018"></label>
+            <label><span>Make</span><input name="make" required placeholder="Toyota"></label>
+            <label><span>Model and trim</span><input name="model" required placeholder="Corolla LE"></label>
+            <label><span>Odometer (km)</span><input type="number" name="km" min="0" step="1000" required placeholder="142000"></label>
+            <label><span>Transmission</span><select name="trans"><option>Automatic</option><option>Manual</option></select></label>
+            <label><span>Drivetrain</span><select name="drive"><option>FWD</option><option>AWD</option><option>RWD</option><option>4x4</option></select></label>
+            <label class="span2"><span>VIN (optional, but it sharpens the number)</span><input name="vin" maxlength="17" placeholder="17 characters, on the dash or the door jamb"></label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Condition, honestly</legend>
+          <div class="form__grid">
+            <label><span>Overall</span><select name="cond">
+              <option>Excellent — nothing needed</option>
+              <option selected>Good — normal wear</option>
+              <option>Fair — needs some work</option>
+              <option>Rough — mechanical issues</option>
+            </select></label>
+            <label><span>Winter tires included</span><select name="tires"><option>Yes, on rims</option><option>Yes, tires only</option><option>No</option></select></label>
+          </div>
+          <div style="margin-top:16px">
+            <label class="checkline"><input type="checkbox" name="damage"><span>Has been in a reported collision</span></label>
+            <label class="checkline"><input type="checkbox" name="lien"><span>There is a loan or lease still on it</span></label>
+            <label class="checkline"><input type="checkbox" name="warning"><span>A warning light is currently on</span></label>
+            <label class="checkline"><input type="checkbox" name="smoke"><span>It has been smoked in</span></label>
+          </div>
+          <label class="field" style="margin-top:16px"><span>Anything else</span><textarea name="notes" placeholder="New brakes last spring, a dent in the tailgate, the second key is lost"></textarea></label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Where to send the offer</legend>
+          <div class="form__grid">
+            <label><span>Name</span><input name="name" required autocomplete="name"></label>
+            <label><span>Postal code</span><input name="postal" required autocomplete="postal-code"></label>
+            <label><span>Email</span><input type="email" name="email" required autocomplete="email"></label>
+            <label><span>Phone</span><input type="tel" name="phone" autocomplete="tel"></label>
+          </div>
+        </fieldset>
+
+        <button class="btn btn--maple btn--wide" type="submit">Get my written offer</button>
+        <p class="formnote">Sent. An appraiser will email your written offer within one business day, and will call if the VIN needs checking.</p>
+      </form>
+
+      <div class="stack">
+        <div class="plate">
+          <div class="plate__band"><span>How the number is built</span><b>No mystery</b></div>
+          <div class="plate__body">
+            <div class="specrows" style="border-top:0;margin-top:0">
+              <div><span>Wholesale market</span><span>Live auction data</span></div>
+              <div><span>Odometer adjustment</span><span>Per 10,000 km</span></div>
+              <div><span>Reconditioning</span><span>Quoted at cost</span></div>
+              <div><span>History report</span><span>Claims deducted</span></div>
+              <div><span>Offer valid</span><span>7 days / 500 km</span></div>
+            </div>
+            <p class="hint" style="margin-top:16px">You see this breakdown on the appraisal sheet. If a number moves after the in-person look, we show you the line that moved and why.</p>
+          </div>
+        </div>
+
+        <div class="note">Still owe on it? Bring the lender name and account number. We pay the loan out directly and finance any shortfall into the new deal.</div>
+
+        <h2 style="font-size:1.6rem;margin-top:16px">Trading in beats selling privately more often than people expect</h2>
+        <p>In Ontario you pay HST only on the difference between the new vehicle price and your trade allowance. On a $38,995 car with a $6,500 trade, that saves $845 in tax &mdash; before you count the ads, the strangers in your driveway, and the safety certificate you would have to buy yourself.</p>
+        <p style="margin:0"><a class="btn btn--ghost" href="financing.html">See it in the calculator</a></p>
+      </div>
+    </div>
+  </section>
+
+  <div class="banner">
+    <div class="wrap banner__in">
+      <div><h2>Rather do it in person?</h2><p>Drop in without an appointment. An appraisal takes about fifteen minutes and you can wait for it.</p></div>
+      <a class="btn btn--ghost-light" href="contact.html">Directions to the lot</a>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <a class="logo" href="index.html" style="margin-bottom:16px">
+          <svg viewBox="0 0 100 100" aria-hidden="true"><path fill="#E8A33D" d="M50 90 L47.5 62 L26 66 L29 57 L7 41 L13 38 L9 21 L28 25 L32 17 L46 31 L39 7 L50 12 L61 7 L54 31 L68 17 L72 25 L91 21 L87 38 L93 41 L71 57 L74 66 L52.5 62 L50 90 Z"/></svg>
+          <span><span class="logo__name">Maple Dealership</span><span class="logo__sub">Est. 1998</span></span>
+        </a>
+        <p>418 Maple Line, Kitchener, Ontario&nbsp;N2C&nbsp;1X4<br>
+        Sales <a href="tel:+15195550142">519 555 0142</a> &middot; Service <a href="tel:+15195550188">519 555 0188</a><br>
+        <a href="mailto:hello@mapledealership.ca">hello@mapledealership.ca</a></p>
+      </div>
+      <div><h4>Shopping</h4><ul>
+        <li><a href="inventory.html">All inventory</a></li><li><a href="specials.html">Specials</a></li>
+        <li><a href="test-drive.html">Book a test drive</a></li><li><a href="trade-in.html">Value your trade</a></li>
+        <li><a href="financing.html">Financing</a></li></ul></div>
+      <div><h4>Ownership</h4><ul>
+        <li><a href="service.html">Service &amp; parts</a></li><li><a href="service.html#warranty">Warranty</a></li>
+        <li><a href="about.html">About us</a></li><li><a href="contact.html">Contact</a></li>
+        <li><a href="faq.html">Questions</a></li></ul></div>
+      <div><h4>Hours</h4>
+        <table class="hours"><tbody>
+          <tr><td>Sales, Mon&ndash;Thu</td><td>9:00 &ndash; 19:00</td></tr>
+          <tr><td>Sales, Fri&ndash;Sat</td><td>9:00 &ndash; 17:00</td></tr>
+          <tr><td>Service, Mon&ndash;Fri</td><td>7:30 &ndash; 17:30</td></tr>
+          <tr><td>Sunday</td><td>Closed</td></tr>
+        </tbody></table>
+      </div>
+    </div>
+    <div class="footer__base">
+      <span>&copy; <span data-year>2026</span> Maple Dealership Ltd. OMVIC registered. UCDA member.</span>
+      <span>Prices exclude HST and licensing. Fictional dealership, built as a demonstration.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/site.js"></script>
+</body>
+</html>

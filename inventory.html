@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inventory — Maple Dealership</title>
+<meta name="description" content="Every new and used car, truck, SUV, van and EV on the lot at Maple Dealership in Kitchener, Ontario. Filter by body type, make, price, fuel and drivetrain.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Public+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="topbar mono">
+  <div class="wrap topbar__in">
+    <div class="topbar__set"><span>418 Maple Line, Kitchener ON</span><a href="tel:+15195550142">519 555 0142</a></div>
+    <div class="topbar__set"><span>Sales open today until 7:00</span><a href="contact.html">Hours &amp; directions</a></div>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap masthead__in">
+    <a class="logo" href="index.html">
+      <svg viewBox="0 0 100 100" aria-hidden="true"><path fill="#E8A33D" d="M50 90 L47.5 62 L26 66 L29 57 L7 41 L13 38 L9 21 L28 25 L32 17 L46 31 L39 7 L50 12 L61 7 L54 31 L68 17 L72 25 L91 21 L87 38 L93 41 L71 57 L74 66 L52.5 62 L50 90 Z"/></svg>
+      <span><span class="logo__name">Maple Dealership</span><span class="logo__sub">Kitchener, ON</span></span>
+    </a>
+    <button class="navtoggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+    <nav class="nav" id="primary-nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="inventory.html" aria-current="page">Inventory</a>
+      <a href="specials.html">Specials</a>
+      <a href="financing.html">Financing</a>
+      <a href="trade-in.html">Trade-in</a>
+      <a href="service.html">Service</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a class="btn btn--maple nav__cta" href="test-drive.html">Book a test drive</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="pagehead">
+    <div class="wrap">
+      <p class="crumb"><a href="index.html">Home</a> / Inventory</p>
+      <h1>Everything on the lot.</h1>
+      <p class="lede">Twelve vehicles, each with a printed history report and a completed 152-point inspection. What you filter here is the same list the sales desk works from.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap split--side split">
+      <!-- FILTERS -->
+      <form class="filters" id="filters" aria-label="Filter inventory">
+        <h3>Narrow the list</h3>
+        <label class="field"><span>Keyword</span><input type="search" name="q" id="f-q" placeholder="Civic, hybrid, 4x4"></label>
+        <label class="field"><span>Body type</span>
+          <select id="f-body"><option value="">Any</option><option>SUV</option><option>Truck</option><option>Sedan</option><option>Hatchback</option><option>Wagon</option><option>Van</option><option>EV</option></select>
+        </label>
+        <label class="field"><span>Make</span>
+          <select id="f-make"><option value="">Any</option></select>
+        </label>
+        <label class="field"><span>Fuel</span>
+          <select id="f-fuel"><option value="">Any</option><option>Gas</option><option>Hybrid</option><option>Electric</option></select>
+        </label>
+        <label class="field"><span>Drivetrain</span>
+          <select id="f-drive"><option value="">Any</option><option>FWD</option><option>AWD</option><option>4x4</option></select>
+        </label>
+        <label class="field"><span>Max price</span>
+          <select id="f-max"><option value="">No limit</option><option value="25000">$25,000</option><option value="35000">$35,000</option><option value="45000">$45,000</option><option value="60000">$60,000</option><option value="99000">$99,000</option></select>
+        </label>
+        <label class="field"><span>Condition</span>
+          <select id="f-cond"><option value="">New and used</option><option>New</option><option>Used</option></select>
+        </label>
+        <label class="field"><span>Sort by</span>
+          <select id="f-sort"><option value="price-asc">Price, low to high</option><option value="price-desc">Price, high to low</option><option value="km-asc">Odometer, lowest</option><option value="year-desc">Model year, newest</option><option value="km-desc">Odometer, highest</option></select>
+        </label>
+        <button class="btn btn--ghost btn--wide btn--plain" type="reset" id="f-reset">Clear filters</button>
+      </form>
+
+      <!-- RESULTS -->
+      <div>
+        <div class="sec-head" style="margin-bottom:22px">
+          <p class="count" id="result-count" style="margin:0">Showing 12 vehicles</p>
+          <p class="hint" style="margin:0">Prices exclude HST and licensing. Safety certificate included.</p>
+        </div>
+        <div class="grid grid--3" id="results"></div>
+        <div class="empty" id="empty" hidden>No vehicle matches those filters. Widen the price or clear the keyword.</div>
+
+        <div class="note" style="margin-top:32px">
+          Not seeing it? Tell us the year, make and trim you want and we will find it at auction, inspect it, and quote it before you commit. <a href="contact.html">Start a vehicle search</a>.
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <a class="logo" href="index.html" style="margin-bottom:16px">
+          <svg viewBox="0 0 100 100" aria-hidden="true"><path fill="#E8A33D" d="M50 90 L47.5 62 L26 66 L29 57 L7 41 L13 38 L9 21 L28 25 L32 17 L46 31 L39 7 L50 12 L61 7 L54 31 L68 17 L72 25 L91 21 L87 38 L93 41 L71 57 L74 66 L52.5 62 L50 90 Z"/></svg>
+          <span><span class="logo__name">Maple Dealership</span><span class="logo__sub">Est. 1998</span></span>
+        </a>
+        <p>418 Maple Line, Kitchener, Ontario&nbsp;N2C&nbsp;1X4<br>
+        Sales <a href="tel:+15195550142">519 555 0142</a> &middot; Service <a href="tel:+15195550188">519 555 0188</a><br>
+        <a href="mailto:hello@mapledealership.ca">hello@mapledealership.ca</a></p>
+      </div>
+      <div><h4>Shopping</h4><ul>
+        <li><a href="inventory.html">All inventory</a></li><li><a href="specials.html">Specials</a></li>
+        <li><a href="test-drive.html">Book a test drive</a></li><li><a href="trade-in.html">Value your trade</a></li>
+        <li><a href="financing.html">Financing</a></li></ul></div>
+      <div><h4>Ownership</h4><ul>
+        <li><a href="service.html">Service &amp; parts</a></li><li><a href="service.html#warranty">Warranty</a></li>
+        <li><a href="about.html">About us</a></li><li><a href="contact.html">Contact</a></li>
+        <li><a href="faq.html">Questions</a></li></ul></div>
+      <div><h4>Hours</h4>
+        <table class="hours"><tbody>
+          <tr><td>Sales, Mon&ndash;Thu</td><td>9:00 &ndash; 19:00</td></tr>
+          <tr><td>Sales, Fri&ndash;Sat</td><td>9:00 &ndash; 17:00</td></tr>
+          <tr><td>Service, Mon&ndash;Fri</td><td>7:30 &ndash; 17:30</td></tr>
+          <tr><td>Sunday</td><td>Closed</td></tr>
+        </tbody></table>
+      </div>
+    </div>
+    <div class="footer__base">
+      <span>&copy; <span data-year>2026</span> Maple Dealership Ltd. OMVIC registered. UCDA member.</span>
+      <span>Prices exclude HST and licensing. Fictional dealership, built as a demonstration.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/site.js"></script>
+<script>
+(function () {
+  var stock = window.MAPLE_STOCK, card = window.MAPLE_CARD;
+  var el = function (id) { return document.getElementById(id); };
+  var results = el('results'), empty = el('empty'), count = el('result-count');
+
+  /* make list, built from stock so it can never drift */
+  var makes = stock.map(function (v) { return v.make; }).filter(function (m, i, a) { return a.indexOf(m) === i; }).sort();
+  el('f-make').innerHTML = '<option value="">Any</option>' + makes.map(function (m) { return '<option>' + m + '</option>'; }).join('');
+
+  /* preset from the home page search bar */
+  var params = new URLSearchParams(location.search);
+  ['body', 'make', 'fuel'].forEach(function (k) { if (params.get(k)) el('f-' + k).value = params.get(k); });
+  if (params.get('max')) el('f-max').value = params.get('max');
+  if (params.get('cond')) el('f-cond').value = params.get('cond');
+  if (params.get('q')) el('f-q').value = params.get('q');
+  if (params.get('sort')) el('f-sort').value = params.get('sort');
+
+  function render() {
+    var q = el('f-q').value.trim().toLowerCase();
+    var max = parseInt(el('f-max').value, 10);
+    var list = stock.filter(function (v) {
+      if (el('f-body').value && v.body !== el('f-body').value) return false;
+      if (el('f-make').value && v.make !== el('f-make').value) return false;
+      if (el('f-fuel').value && v.fuel !== el('f-fuel').value) return false;
+      if (el('f-drive').value && v.drive !== el('f-drive').value) return false;
+      if (el('f-cond').value && v.condition !== el('f-cond').value) return false;
+      if (max && v.price > max) return false;
+      if (q) {
+        var hay = [v.year, v.make, v.model, v.body, v.fuel, v.drive, v.colour, v.id, v.feat.join(' ')].join(' ').toLowerCase();
+        if (hay.indexOf(q) === -1) return false;
+      }
+      return true;
+    });
+
+    var sort = el('f-sort').value;
+    list.sort(function (a, b) {
+      if (sort === 'price-desc') return b.price - a.price;
+      if (sort === 'km-asc') return a.km - b.km;
+      if (sort === 'km-desc') return b.km - a.km;
+      if (sort === 'year-desc') return b.year - a.year;
+      return a.price - b.price;
+    });
+
+    results.innerHTML = list.map(card).join('');
+    empty.hidden = list.length > 0;
+    count.textContent = list.length === 1 ? 'Showing 1 vehicle' : 'Showing ' + list.length + ' of ' + stock.length + ' vehicles';
+  }
+
+  el('filters').addEventListener('input', render);
+  el('filters').addEventListener('change', render);
+  el('f-reset').addEventListener('click', function () { setTimeout(render, 0); });
+  render();
+})();
+</script>
+</body>
+</html>
